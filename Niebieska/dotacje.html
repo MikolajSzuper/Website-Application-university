@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+    <title> Dotacje</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+    <body>
+        <div>
+            <h2>Formularz dotacji</h2>
+            <form action="#" method="get">
+                <p>
+                    <fieldset>
+                        <label for="beneficjent">Beneficjent:</label>
+                        <input list="beneficjent" id="bene-choice" name="beneficjent" />
+                        <datalist id="beneficjent">
+                        <option value="Chocolate"></option>
+                        <option value="Coconut"></option>
+                        <option value="Mint"></option>
+                        <option value="Strawberry"></option>
+                        <option value="Vanilla"></option>
+                        </datalist><br>
+                        <label for="valueofdot">Wartość dotacji:</label><input id="valueofdot" type="number" step="10" min="20">
+                    </fieldset><br>
+                    <fieldset><legend>Dane karty płatniczej:</legend>
+                        Karta: <input type="radio" name="visa" value="karta">
+                        Visa<input type="radio" name="visa" value="karta">Master Card<br>
+                        Numer:<input type="text" name="numerkarty" pattern="[0-9]{13}|[0-9]{16}" title="Numer karty to liczby od 0-9 w ilości 13 lub 16" required><br>
+                        Data ważności:<input type="month" name="data"><br>
+                        CVV:<input type="text" name="cvv" pattern="[0-9]{3}|[0-9]{4}" title="Numer pin to liczba od 0-9 w ilości 3 lub 4" required><br>
+                    </fieldset><br>
+                    Darczyńca:<input type="text" name="podpis"><br><br>
+                    <input type="submit" value="Rejestruj">
+                    <input type="reset" value="Wyczyść">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
