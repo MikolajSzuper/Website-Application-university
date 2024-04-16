@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="CSS/style.css" type="text/css" />
  <link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+ <script src="JS/walidacja.js"></script>
 <title>Szybki kurs HTML</title>
 </head>
 <body>
@@ -58,13 +59,13 @@
                     </tr>
                     </table>
                     <h4>Zamawiam tutorial z języka:</h4>
-                    <p><input name="php" type="checkbox" id="php"/>PHP
-                    <input name="c" type="checkbox" id="c"/>C/C++
-                    <input name="java" type="checkbox" id="java"/>Java
+                    <p><input name="php" type="checkbox" id="php" />PHP
+                    <input name="c" type="checkbox" id="c" />C/C++
+                    <input name="java" type="checkbox" id="java" />Java
                     <span id="produkt_error" class="czerwone"></span></p>
                     <h4>Sposób zapłaty:</h4>
                     <p><input name="zaplata" id="zaplata" type="radio" value="euro" />eurocard
-                    <input name="zaplata" type="radio" value= "visa" />visa
+                    <input name="zaplata" type="radio" value= "visa" checked="checked" />visa
                     <input name="zaplata" type="radio" value= "przelew" />przelew bankowy
                     <span id="zaplata_error" class="czerwone"></span><br />
                     <input type="submit" value=" Wyślij " />
