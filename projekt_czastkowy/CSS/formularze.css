@@ -1,0 +1,25 @@
+.button{
+    background: #fbf306;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.button:hover{
+    background: #ff0000;
+}
+
+.input_frame {
+    background: rgb(37, 35, 35);
+    border: 0;
+    color: #fbf306;
+    margin-bottom: 5px;
+}
+
+.select_frame {
+    background: rgb(37, 35, 35);
+    border: 0;
+    color: #fbf306;
+    margin-bottom: 5px;
+}

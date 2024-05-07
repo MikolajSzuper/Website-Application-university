@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+ <link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+<title>Szybki kurs HTML</title>
+</head>
+<body>
+    <header>
+        <h2>Szybki kurs HTML</h2>
+    </header>
+    <nav>
+        <ul id="nav">
+        <li><a href="index.html">Podstawy</a></li>
+        <li><a href="tabele.html">Tabele</a></li>
+        <li><a href="">Formularze</a>
+        <ul>
+        <li><a href="formularze.html" >Pola formularza</a></li>
+        <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+        </ul>
+        </li>
+        <li><a href="galeria.html" title="">Galeria</a></li>
+        </ul>
+    </nav>       
+    <article>
+        <h3>Podstawowe znaczniki formularza HTML to:</h3>
+        <ul>
+            <li><strong>&lt;form&gt;</strong> - znacznik podstawowy zawierający pola formularza</li>
+            <li><strong>&lt;input&gt;</strong> - znacznik umożliwia wstawianie różnych pól(pole tekstowe, przycisk typu radio, przycisk typu checkbox) w zależności od wartości jego atrybutu type</li>
+            <li><strong>&lt;select&gt;</strong> - pole formularza typu lista rozwijana</li>
+            <li><strong>&lt;textarea&gt;</strong> - pole formularza typu obszar tekstowy</li>
+            <li><strong>&lt;button&gt;</strong> - pole formularza typu przycisk</li>
+        </ul>
+        <h3>Przykładowy formularz HTML:</h3>
+        <div>
+            <form method="post" action="mailto:xxx@xxx.xx">
+                <table>
+                <tr> <td>Nazwisko: </td>
+                <td><input class="input_frame" name="nazw" size="30" id="nazw" required minlength="2" maxlength="20" placeholder="Podaj swoje nazwisko" title="Od 2 do 20 znaków" pattern="[A-Za-z ]{2,20}"/> </td>
+                </tr>
+                <tr> <td>Wiek:</td>
+                <td><input class="input_frame" name="wiek" size ="30" id="wiek" required step="1" placeholder="Podaj swój wiek" title="Podaj poprawny wiek"/></td>
+                </tr>
+                <tr> <td>Państwo:</td>
+                    <td><select class="select_frame" name="kraj" id="kraj">
+                    <option value="pl" selected="selected">Polska</option>
+                    <option value="gb">Wielka Brytania</option>
+                     </select>
+                    </td>
+                    </tr>
+                    <tr> <td>Adres e-mail: </td>
+                    <td><input class="input_frame" name="email" size ="30" id="email" required placeholder="Podaj adres e-mail" title="Podaj poprawny adres e-mail" pattern="[^@\s]+@[^@\s]+"/></td>
+                    </tr>
+                    </table>
+                    <h4>Zamawiam tutorial z języka:</h4>
+                    <label>PHP
+                        <input name="php" type="checkbox" id="php">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label>C++
+                        <input name="c" type="checkbox" id="c">
+                        <span class="checkmark"></span>
+                      </label>
+                    <label>Java
+                        <input name="java" type="checkbox" id="java">
+                        <span class="checkmark"></span>
+                      </label>
+                    <h4>Sposób zapłaty:</h4>
+                    <p><input class="radiob" name="zaplata" id="zaplata" type="radio" value="euro" />eurocard
+                    <input class="radiob" name="zaplata" type="radio" value= "visa" checked="checked" />visa
+                    <input class="radiob" name="zaplata" type="radio" value= "przelew" />przelew bankowy <br>
+                    <input class="button" type="submit" value=" Wyślij " />
+                    <input class="button" type="reset" value=" Anuluj " /></p>
+                    </form>
+            </div>
+    </article>
+    <aside>
+        <!-- W pasku zawarty jest kolejny blok klasy box:-->
+        <div class="box">
+        <h3>Walidatory:</h3>
+        <ul>
+         <li> <a href="http://validator.w3.org/">HTML </a></li>
+         <li> <a href="http://jigsaw.w3.org/css-validator/">CSS</a></li>
+        </ul>
+        </div>
+        <!-- Kolejny blok klasy box:-->
+        <div class="box">
+        <h3>Kursy:</h3>
+        <ul>
+        <li> <a href="https://www.w3schools.com/html/"> HTML </a></li>
+        <li> <a href="https://www.w3schools.com/css/"> CSS </a></li>
+        <li> <a href="https://www.w3schools.com/js/"> JS </a></li>
+        <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
+        </ul>
+    </div>
+    </aside>
+    <footer> 
+        &copy;BP 
+    </footer>
+    </body>
+</html>
