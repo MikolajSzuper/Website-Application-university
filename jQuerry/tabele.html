@@ -8,10 +8,10 @@
 <title>Szybki kurs HTML</title>
 </head>
 <body>
-    <header>
-        <h2>Szybki kurs HTML</h2>
-    </header>
-    <nav>
+    <div id="kontener">
+    <div id="baner"><h2>Szybki kurs HTML</h2>
+    </div>
+    <div id="menu">
         <ul id="nav">
         <li><a href="index.html">Podstawy</a></li>
         <li><a href="tabele.html">Tabele</a></li>
@@ -23,8 +23,8 @@
         </li>
         <li><a href="galeria.html" title="">Galeria</a></li>
         </ul>
-    </nav>       
-    <article>
+    </div>
+    <div id="tresc">
         <h3>Podstawowe znaczniki do tworzenia tabel to:</h3>
         <ul>
             <li><strong>&lt;table&gt;</strong> - znacznik zawierający całą tabelę</li>
@@ -37,7 +37,6 @@
             <li><strong>&lt;th&gt;</strong> - komórka nagłówkowa tabeli(również zawarta w wierszu).</li>
         </ul>
         <h3>Przykładowa tabela HTML:</h3>
-        <div class="table_res">
         <table>
             <caption>Popularność języków programowania</caption>
              <thead>
@@ -56,7 +55,7 @@
                 <td>1</td>
                 <td>2</td>
              </tr>
-             <tr>
+             <tr id="parzyste">
                 <td>C</td>
                 <td>2</td>
                 <td>1</td>
@@ -66,7 +65,7 @@
                 <td>3</td>
                 <td>7</td>
              </tr>
-             <tr>
+             <tr id="parzyste">
                 <td>C++</td>
                 <td>4</td>
                 <td>4</td>
@@ -85,9 +84,8 @@
              </tr>
              </tfoot>
         </table>
-        </div>
-    </article>
-    <aside>
+    </div>
+    <div id="pasek">
         <!-- W pasku zawarty jest kolejny blok klasy box:-->
         <div class="box">
         <h3>Walidatory:</h3>
@@ -106,9 +104,8 @@
         <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
         </ul>
     </div>
-    </aside>
-    <footer> 
-        &copy;BP 
-    </footer>
+    </div>
+    <br><div id="stopka">&copy;BP </div>
+    </div>
     </body>
 </html>

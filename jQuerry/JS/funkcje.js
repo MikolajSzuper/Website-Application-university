@@ -1,3 +1,9 @@
+$(document).ready(function () {
+    $('#tresc').css('background','grey');
+    $('input').css('font-weight','bold');
+    $('.zielony').css('background','lime');
+});
+
 function oblicz()
  { 
 var K=parseFloat(document.getElementById('K').value);

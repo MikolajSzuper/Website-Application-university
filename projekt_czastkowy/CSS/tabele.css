@@ -1,3 +1,7 @@
+.table_res {
+    overflow-x: auto;
+}
+
 table {
     background: rgb(37, 35, 35);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);

@@ -4,7 +4,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="CSS/style.css" type="text/css" />
- <script src="JS/funkcje.js"></script>
+ <script src="JS/kalkulatorek.js"></script>
 <title>Szybki kurs HTML</title>
 </head>
 <body>
@@ -25,15 +25,23 @@
         </ul>
     </div>       
     <div id="tresc">
-        <div><h3>Obliczanie raty kredytu</h3>
-            <table><tbody>
-            <tr><td>Kwota pożyczki:</td><td><input id="K" /></td> </tr>
-            <tr><td>Oprocentowanie roczne:</td><td><input id="pr" /></td> </tr>
-            <tr><td>Liczb rat:</td><td><input id="n" /></td> </tr>
-            <tr><td>Całość z odstetkami:</td><td><input id="rata_cala" disabled value=""/></td></tr>
-            <tr><td>Rata:</td><td><input id="rata" disabled value=""/></td></tr>
-            <tr><td><button onclick="oblicz()">Oblicz rate</button></td>    
-        </tbody></table></div>
+        <fieldset><legend>Kalkulatorek:</legend>
+
+            <table>
+            <thead>
+                <tr>
+                <th>Wpisz liczby:</th>
+                <th>Wskaż dzaiałanie:</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <tr><td>X:</td><td><input type="radio" name="dzialanie" value="+" /> +</td></tr>
+                <tr><td><input id="X" /></td><td><input type="radio" name="dzialanie" value="-" /> -</td></tr>
+                <tr><td>Y:</td><td><input type="radio" name="dzialanie" value="*" /> *</td></tr>
+                <tr><td><input id="Y" /></td><td><input type="radio" name="dzialanie" value="/" /> /</td></tr>
+                <tr><td><button onclick="oblicz()">Oblicz</button></td><td>Wynik:<input id="w" disabled value=""/></td>   
+            </tbody></table>
+        </fieldset><br>
     </div>
     <div id="pasek">
         <!-- W pasku zawarty jest kolejny blok klasy box:-->

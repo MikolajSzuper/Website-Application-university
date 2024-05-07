@@ -1,0 +1,13 @@
+label {
+    color: #ff0000;
+}
+
+.button{
+    background: #fbf306;
+    width: 400px;
+    height: 30px;
+}
+
+.button:hover{
+    background: #ff0000;
+}
