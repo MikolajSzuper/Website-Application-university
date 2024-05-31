@@ -1,0 +1,4 @@
+ <h2>O stronie</h2>
+ <p>
+ <b>AJAX </b>(Asynchronous JavaScript and XML) ...
+ </p>

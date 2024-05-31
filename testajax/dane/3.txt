@@ -1,0 +1,4 @@
+ <h2>Galeria</h2>
+ <p>
+ <b>zdjęcie </b>wakacja
+ </p>

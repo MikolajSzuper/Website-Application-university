@@ -1,0 +1,4 @@
+ <h2>Aktualności</h2>
+ <p>
+ <b>O coś nowego </b>test
+ </p>
