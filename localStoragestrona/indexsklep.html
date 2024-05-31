@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Produktu</title>
+    <script>
+        function saveProduct() {
+                var item = {};
+                item.price = document.getElementById("price").value;
+                item.name = document.getElementById("product-name").value;
+                item.color = document.getElementById("color").value;
+                item.quantity = document.getElementById("quantity").value;
+                var list = JSON.parse(localStorage.getItem('list'));
+                if(list === null) list=[];
+                list.push(item);
+                localStorage.setItem('list',JSON.stringify(list));
+                /*var item_number = localStorage.length + 1;
+                localStorage.setItem('item_'+item_number, JSON.stringify(item));*/
+                console.log(item);
+        }
+        function displayCart(mode) {
+            var result = "";
+            //var items = localStorage.length;
+            var list = JSON.parse(localStorage.getItem('list'));
+            if (list===null) {
+                result += "<h1>Koszyk</h1> Koszyk jest pusty!";
+            }else{
+                result += "<h1>Koszyk</h1><input type='text' id='search' name='search'><input type='button' value='Szukaj' onclick='displayCart(0)'><br><table><thead><tr><th>Nazwa produktu</th><th>Cena</th><th>Kolor</th><th>Liczba sztuk</th><th></th></tr></thead><tbody>";
+                if (!mode) {
+                    var our_item = document.getElementById("search").value;   
+                }
+                for (i = 0; i < list.length;i++) {
+                    if (list[i].name.includes(our_item) || mode) {
+                        result += "<tr><td>"+list[i].name+"</td><td>"+list[i].price+"</td><td>"+list[i].color+"</td><td>"+list[i].quantity+"</td><td><button class='delete_elem' onclick='deleteElem("+i+")'>-</button></td></tr>";   
+                    }
+                }
+                result += "</tbody></table>";
+            }
+
+           /*result += "<h1>Koszyk</h1><table><thead><tr><th>Nazwa produktu</th><th>Cena</th><th>Kolor</th><th>Liczba sztuk</th></tr></thead><tbody>";
+            for(var i=1;i<=localStorage.length;i++) { 
+                var retrieveItem = JSON.parse(localStorage.getItem('item_'+i));
+                result += "<tr><td>"+retrieveItem.name+"</td><td>"+retrieveItem.price+"</td><td>"+retrieveItem.color+"</td><td>"+retrieveItem.quantity+"</td></tr>";
+            }*/
+            document.getElementById("cart").innerHTML = result;
+        }
+        function clearCart() {
+            localStorage.removeItem('list');
+            displayCart(1);
+        }
+        function deleteElem(i) {
+            var list = JSON.parse(localStorage.getItem('list'));
+            if (confirm("Usunąć element?")) list.splice(i,1);
+            localStorage.setItem('list',JSON.stringify(list));
+            displayCart(1);
+        }
+    </script>
+</head>
+<body>
+    <h1>Formularz Produktu</h1>
+    <form id="product-form">
+        <label for="product-name">Nazwa produktu:</label><br>
+        <input type="text" id="product-name" name="product-name" required><br><br>
+        
+        <label for="price">Cena:</label><br>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+        
+        <label for="color">Kolor:</label><br>
+        <input type="text" id="color" name="color" required><br><br>
+        
+        <label for="quantity">Liczba sztuk:</label><br>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+        
+        <input type="button" value="Zapisz produkt do koszyka" onclick="saveProduct()">
+        <input type="button" value="Wyświetl koszyk" onclick="displayCart(1)">
+        <input type="button" value="Usuń wszystkie produkty" onclick="clearCart()">
+    </form>
+
+    <div id="cart"></div>
+</body>
+</html>

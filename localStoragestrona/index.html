@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Test sessionStorage</title>
+    <script>
+        /*
+        function savePair(){
+            var code = document.getElementById("colorCode").value;
+            var name = document.getElementById("colorName").value;
+            if (typeof(Storage) !== "undefined") {
+                sessionStorage.setItem(code,name);
+                alert("Zapisane.");
+            }else{
+                alert("Twoja przeglądarka nie obsługuje seasionStorage.");
+            }
+        }
+        function showPairs(){
+            var result="";
+            for(var i=0;i<sessionStorage.length;i++) { 
+                var code = sessionStorage.key(i);
+                var name = sessionStorage.getItem(code);
+                if (code !== "IsThisFirstTime_Log_From_LiveServer"){
+                result += "<p style=background-color:#"+code+">"+name +", "+"kod koloru: "+code+ "</p>";
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+        function clearData() {
+            sessionStorage.clear();
+            alert("Usunięte");
+        }*/
+
+        function savePair(){
+            var code = document.getElementById("colorCode").value;
+            var name = document.getElementById("colorName").value;
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem(code,name);
+                alert("Zapisane.");
+            }else{
+                alert("Twoja przeglądarka nie obsługuje seasionStorage.");
+            }
+        }
+        function showPairs(){
+            var result="";
+            for(var i=0;i<localStorage.length;i++) { 
+                var code = localStorage.key(i);
+                var name = localStorage.getItem(code);
+                if (code !== "IsThisFirstTime_Log_From_LiveServer"){
+                result += "<p style=background-color:#"+code+">"+name +", "+"kod koloru: "+code+ "</p>";
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+        function clearData() {
+            localStorage.clear();
+            alert("Usunięte");
+        }
+    </script>
+</head>
+<body>
+    <h1>Test sessionStorage</h1>
+    <label for="colorCode">Kod koloru: </label>
+    <input type="text" id="colorCode" value="FF0000">
+    <label for="colorName">, nazwa koloru: </label>
+    <input type="text" id="colorName" value="Red">
+    <br><br>
+    <button onclick="savePair()">Zapisz parę</button>
+    <button onclick="showPairs()">Pokaż wszystkie pary</button>
+    <button onclick="clearData()">Usuń dane</button>
+    <h1>Dane z sessionStorage:</h1>
+    <div id="result"></div>
+</body>
+</html>
