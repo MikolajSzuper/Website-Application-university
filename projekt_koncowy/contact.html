@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://maps.google.com/maps/api/js?sensor=false" ></script>
+<title>Salon samochodowy</title>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><i class="fa fa-times"></i></a></li>
+            <li><a href="index.html"><i class="fa fa-home"></i>Start</a></li>
+            <li><a href="cars.html"><i class="fa fa-car"></i>Samochody</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Kontakt</a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html"><b>Car</b><span style="color: green;">Buy</span></a></li>
+            <li class="hideOnMobile"><a href="index.html"><i class="fa fa-home"></i>Start</a></li>
+            <li class="hideOnMobile"><a href="cars.html"><i class="fa fa-car"></i>Samochody</a></li>
+            <li class="hideOnMobile"><a href="contact.html"><i class="fa fa-phone"></i>Kontakt</a></li>
+            <li class="hideOnMobile"><a href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
+        </ul>
+    </nav>       
+    <div id="items">
+        <div class="contact-frame">
+        <h1>Skontaktuj się z nami!</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rezerwacja samochodu</th>
+                    <th>Oferta dla biznesu</th>
+                    <th>Zgłoszenie awarii</th>
+                </tr>
+            </thead>
+            <tr>
+                <td><i class="fa fa-phone"></i> +48 444 444 444</td>
+                <td><i class="fa fa-phone"></i> +48 333 333 333</td>
+                <td><i class="fa fa-phone"></i> +48 222 222 222</td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-envelope-o"></i> test@test.pl</td>
+                <td><i class="fa fa-envelope-o"></i> test1@test.pl</td>
+                <td><i class="fa fa-envelope-o"></i> test2@test.pl</td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-clock-o"></i> 24h</td>
+                <td><i class="fa fa-clock-o"></i> 8:00-16:00</td>
+                <td><i class="fa fa-clock-o"></i> 24h</td>
+            </tr>
+        </table>
+        <div class="findus"><h1>Znajdź nas!</h1></div>
+        <div id="mapka">
+            <!-- tu będzie mapa -->
+           </div>
+        </div>
+    </div>
+    <footer> 
+        &copy;MS
+    </footer>
+    <script src="JS/scripts.js"></script>
+    </body>
+</html>

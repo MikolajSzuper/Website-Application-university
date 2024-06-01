@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: 4.0L V8</li>
+    <li>Moc: 450 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 4.3 sekundy</li>
+    <li>Prędkość maksymalna: 300 km/h</li>
+    <li>Średnie spalanie: 12.0 l/100 km</li>
+    <li>Napęd: Na tylne koła (RWD)</li>
+    <li>Cena: 600000 PLN</li>
+</ul>

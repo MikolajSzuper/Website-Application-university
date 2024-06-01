@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: Elektryczny</li>
+    <li>Moc: 200 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 7.5 sekundy</li>
+    <li>Prędkość maksymalna: 160 km/h</li>
+    <li>Zasięg: 300 km</li>
+    <li>Napęd: Na tylne koła (RWD)</li>
+    <li>Cena: 350000 PLN</li>
+</ul>

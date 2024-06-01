@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: 3.0L V6</li>
+    <li>Moc: 280 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 6.9 sekundy</li>
+    <li>Prędkość maksymalna: 230 km/h</li>
+    <li>Średnie spalanie: 8.5 l/100 km</li>
+    <li>Napęd: Na przednie koła (FWD)</li>
+    <li>Cena: 450000 PLN</li>
+</ul>

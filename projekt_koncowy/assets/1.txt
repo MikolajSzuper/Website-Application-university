@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: 2.0L Turbo V4</li>
+    <li>Moc: 250 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 6.2 sekundy</li>
+    <li>Prędkość maksymalna: 240 km/h</li>
+    <li>Średnie spalanie: 7.5 l/100 km</li>
+    <li>Napęd: Na przednie koła (FWD)</li>
+    <li>Cena: 300000 PLN</li>
+</ul>

@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: 3.5L V6</li>
+    <li>Moc: 310 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 7.1 sekundy</li>
+    <li>Prędkość maksymalna: 220 km/h</li>
+    <li>Średnie spalanie: 9.8 l/100 km</li>
+    <li>Napęd: Na wszystkie koła (AWD)</li>
+    <li>Cena: 400000 PLN</li>
+</ul>

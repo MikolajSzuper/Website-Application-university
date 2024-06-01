@@ -1,0 +1,9 @@
+<ul>
+    <li>Silnik: 1.8L Hybrid</li>
+    <li>Moc: 140 KM</li>
+    <li>Przyspieszenie 0-100 km/h: 8.5 sekundy</li>
+    <li>Prędkość maksymalna: 180 km/h</li>
+    <li>Średnie spalanie: 4.2 l/100 km</li>
+    <li>Napęd: Na przednie koła (FWD)</li>
+    <li>Cena: 270000 PLN</li>
+</ul>

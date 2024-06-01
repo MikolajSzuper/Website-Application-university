@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Salon samochodowy</title>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><i class="fa fa-times"></i></a></li>
+            <li><a href="index.html"><i class="fa fa-home"></i>Start</a></li>
+            <li><a href="cars.html"><i class="fa fa-car"></i>Samochody</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Kontakt</a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html"><b>Car</b><span style="color: green;">Buy</span></a></li>
+            <li class="hideOnMobile"><a id="btn1" href="index.html"><i class="fa fa-home"></i>Start</a></li>
+            <li class="hideOnMobile"><a id="btn2" href="cars.html"><i class="fa fa-car"></i>Samochody</a></li>
+            <li class="hideOnMobile"><a id="btn3" href="contact.html"><i class="fa fa-phone"></i>Kontakt</a></li>
+            <li class="hideOnMobile"><a id="btn4" href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
+        </ul>
+    </nav>       
+    <div id="items">
+        <div class="shopping-cart">
+            <h2>Koszyk</h2>
+            <form id="contactForm" action="mailto:s99711@pollub.edu.pl" method="post" onsubmit="return pokazDane();">
+            <div id="shopping-cart-content">
+                <div class='position'>
+                    <table>
+                        <thead>
+                            <th></th>
+                            <th>Nazwa</th>
+                            <th>Kolor</th>
+                            <th>Kolor wnętrza</th>
+                            <th>Wyposażenie</th>
+                            <th>Dodatki</th>
+                            <th>Cena</th>
+                            <th></th>
+                        </thead><tbody>
+                        <tr>
+                        <td><img src='assets/1.png'></td>
+                        <td><div id="responsive_tag">Nazwa</div><br>test</td>
+                        <td><div id="responsive_tag">Nazwa</div><br><div>
+                            <input type="radio" id="radioWhite" name="color" value="white">
+                            <label for="radioWhite">Biały</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioBlack" name="color" value="black">
+                            <label for="radioBlack">Czarny</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioRed" name="color" value="red">
+                            <label for="radioRed">Czerwony</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioBlue" name="color" value="blue">
+                            <label for="radioBlue">Niebieski</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioSilver" name="color" value="silver">
+                            <label for="radioSilver">Srebrny</label>
+                        </div></td>
+                        <td><div id="responsive_tag">Nazwa</div><br><div>
+                            <input type="radio" id="radioBlackInterior" name="interiorColor" value="black">
+                            <label for="radioBlackInterior">Czarny</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioBeigeInterior" name="interiorColor" value="beige">
+                            <label for="radioBeigeInterior">Beżowy</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioGreyInterior" name="interiorColor" value="grey">
+                            <label for="radioGreyInterior">Szary</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioBrownInterior" name="interiorColor" value="brown">
+                            <label for="radioBrownInterior">Brązowy</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioWhiteInterior" name="interiorColor" value="white">
+                            <label for="radioWhiteInterior">Biały</label>
+                        </div></td>
+                        <td><div id="responsive_tag">Nazwa</div><br><div class="radio-group">
+                            <div>
+                                <input type="radio" id="radioStandard" name="equipment" value="standard">
+                                <label for="radioStandard">Standard</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="radioPremium" name="equipment" value="premium">
+                                <label for="radioPremium">Premium</label>
+                            </div>
+                        </div></td>
+                        <td><div id="responsive_tag">Nazwa</div><br><div>
+                            <input type="checkbox" id="checkboxGPS" name="accessories" value="gps">
+                            <label for="checkboxGPS">System nawigacji GPS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkboxBluetooth" name="accessories" value="bluetooth">
+                            <label for="checkboxBluetooth">System Bluetooth</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkboxParkingSensors" name="accessories" value="parkingSensors">
+                            <label for="checkboxParkingSensors">Czujniki parkowania</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkboxHeatedSeats" name="accessories" value="heatedSeats">
+                            <label for="checkboxHeatedSeats">Podgrzewane siedzenia</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkboxSunroof" name="accessories" value="sunroof">
+                            <label for="checkboxSunroof">Szyberdach</label>
+                        </div></td>
+                        <td><div id="responsive_tag">Nazwa</div><br>300 PLN</td>
+                        <td><button id='btn_trash' data-target='"+i+"'><i class='fa fa-trash'></i></button></td></tr>
+                    </tbody></table>
+                    <div id='summary'>
+                            <h3>Podsumowanie</h3><br>
+                                <div>
+                                    <label for="firstName">Imię:</label>
+                                    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+" title="Imię musi składać się z liter" />
+                                </div>
+                                <div>
+                                    <label for="lastName">Nazwisko:</label>
+                                    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ\-]+" title="Nazwisko musi składać się z liter i ewentualnie myślnika (-)" />
+                                </div>
+                                <div>
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email" required />
+                                </div>
+                                <div>
+                                    <label for="phone">Numer telefonu:</label>
+                                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{9}" title="Numer telefonu musi składać się z 9 cyfr" />
+                                </div>
+                            <label>Łączny koszt: </label><label id='summary_label'></label><br>
+                            <button type="submit" id='rentcars_button'>Złóż zamówienie</button><br>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <footer> 
+        &copy;MS
+    </footer>
+    <script src="JS/scripts.js"></script>
+    </body>
+</html>
