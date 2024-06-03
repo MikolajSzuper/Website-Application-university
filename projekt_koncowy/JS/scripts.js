@@ -9,6 +9,9 @@ function hideSidebar() {
 document.addEventListener("DOMContentLoaded", function() {
         var currentUrl = window.location.href;
         var currentFile = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+        addToCartUpdateDraw();
+        
         if (currentFile == "cart.html") {
             showCart();
 
@@ -22,15 +25,19 @@ document.addEventListener("DOMContentLoaded", function() {
             fetch(url)
                 .then(response => response.text())
                 .then(dane => {
-                    let detailsElement = document.querySelector(`#element-${i} #details`);
+                    let detailsElement = document.querySelector(`#element-${i} .details`);
                     detailsElement.innerHTML = dane;
+                    var buttons = document.querySelectorAll(".btn_more");
+                    buttons.forEach(function(button) {
+                        button.textContent = "Zwiń szczegóły";
+                    })
                 })
                 .catch(error => console.error('Error:', error));
         }
         button.style.display = 'none';
     }, false);
 
-    var buttons = document.querySelectorAll("#btn_more");
+    var buttons = document.querySelectorAll(".btn_more");
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
             var target = button.getAttribute('data-target');
@@ -39,8 +46,14 @@ document.addEventListener("DOMContentLoaded", function() {
             fetch(url)
                 .then(response => response.text())
                 .then(dane => {
-                    var detailsElement = document.querySelector(`#element-${target} #details`);
-                    detailsElement.innerHTML = dane;
+                    var detailsElement = document.querySelector(`#element-${target} .details`);
+                    if (detailsElement.innerHTML.trim() === "") {
+                        detailsElement.innerHTML = dane;
+                        button.textContent = "Zwiń szczegóły";
+                        }else{
+                        detailsElement.innerHTML = "";
+                        button.textContent = "Szczegóły";
+                        }
                 })
                 .catch(error => console.error('Error:', error));
         });
@@ -59,6 +72,7 @@ function btnTrash() {
                     if (confirm("Usunąć element?")) list.splice(target,1);
                     localStorage.setItem('list',JSON.stringify(list));
                     showCart();
+                    addToCartUpdateDraw();
                 });
             });
 }
@@ -68,6 +82,8 @@ function showCart() {
             var list = JSON.parse(localStorage.getItem('list'));
             if (list===null || list.length===0) {
                 result += "Koszyk jest pusty!";
+                document.getElementById("shopping-cart-content").innerHTML = result;
+                return
             }else{
                 result += '<form id="contactForm" action="mailto:s99711@pollub.edu.pl" method="post" onsubmit="return showCartInWindow();">';
                 result += '<div id="shopping-cart-content">';
@@ -188,7 +204,7 @@ function showCart() {
                 result += '    </form>';
             }
             document.getElementById("shopping-cart-content").innerHTML = result;
-            if(list.length!=0){
+            if(list.length!==0){
                 var summary_result=0;
                 for (i = 0; i < list.length;i++) {
                     summary_result += parseInt(list[i].price);
@@ -240,7 +256,7 @@ function addToCart(id) {
             var url = `http://localhost:81/projekt_koncowy/assets/${id}.txt`;
             var item = {};
             item.id = id;
-            item.name = document.querySelector(`#element-${id} #name`).textContent;
+            item.name = document.querySelector(`#element-${id} .name`).textContent;
             item.color = 'Biały';
             item.color_inside = 'Czarny';
             item.equpimnet = 'Standard';
@@ -257,11 +273,22 @@ function addToCart(id) {
                     if(list === null) list=[];
                     list.push(item);
                     localStorage.setItem('list',JSON.stringify(list));
-                    console.log(item);
+                    //console.log(item);
+                    addToCartUpdateDraw();
                 })
                 .catch(error => console.error('Error:', error));
 }
    
+function addToCartUpdateDraw(){
+    var list = JSON.parse(localStorage.getItem('list'));
+        var cart_quantity = 0;
+        if (list!==null) {
+            cart_quantity = list.length;
+        }
+        //console.log(cart_quantity);
+        document.getElementById("cart_parts").textContent = "("+cart_quantity+")";
+}
+
 function showLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;

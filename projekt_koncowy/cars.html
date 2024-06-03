@@ -21,7 +21,7 @@
             <li class="hideOnMobile"><a href="index.html"><i class="fa fa-home"></i>Start</a></li>
             <li class="hideOnMobile"><a href="cars.html"><i class="fa fa-car"></i>Samochody</a></li>
             <li class="hideOnMobile"><a href="contact.html"><i class="fa fa-phone"></i>Kontakt</a></li>
-            <li class="hideOnMobile"><a href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk</a></li>
+            <li class="hideOnMobile"><a href="cart.html"><i class="fa fa-shopping-cart"></i>Koszyk<div id="cart_parts"></div></a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
         </ul>
     </nav>       
@@ -29,50 +29,50 @@
         <div id="car-gallery">
             <div id="element-1" class="gallery-element">
                 <img src="assets/1.png" alt="Pojazd 1">
-                <h3 id="name">AeroSwift GT</h3>
+                <h3 class="name">AeroSwift GT</h3>
                 <button onclick="addToCart(1)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="1">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="1">Szczegóły</button>
+                <div class="details"></div>
             </div>
             
             <div id="element-2" class="gallery-element">
                 <img src="assets/2.png" alt="Pojazd 2">
-                <h3 id="name">TerraCruiser X5</h3>
+                <h3 class="name">TerraCruiser X5</h3>
                 <button onclick="addToCart(2)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="2">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="2">Szczegóły</button>
+                <div class="details"></div>
             </div>
             
             <div id="element-3" class="gallery-element">
                 <img src="assets/3.png" alt="Pojazd 3">
-                <h3 id="name">UrbanElektra EV</h3>
+                <h3 class="name">UrbanElektra EV</h3>
                 <button onclick="addToCart(3)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="3">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="3">Szczegóły</button>
+                <div class="details"></div>
             </div>
             
             <div id="element-4" class="gallery-element">
                 <img src="assets/4.png" alt="Pojazd 4">
-                <h3 id="name">Luxoria S7</h3>
+                <h3 class="name">Luxoria S7</h3>
                 <button onclick="addToCart(4)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="4">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="4">Szczegóły</button>
+                <div class="details"></div>
             </div>
             
             <div id="element-5" class="gallery-element">
                 <img src="assets/5.png" alt="Pojazd 5">
-                <h3 id="name">EcoMotion Hybrid</h3>
+                <h3 class="name">EcoMotion Hybrid</h3>
                 <button onclick="addToCart(5)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="5">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="5">Szczegóły</button>
+                <div class="details"></div>
             </div>
             
             <div id="element-6" class="gallery-element">
                 <img src="assets/6.png" alt="Pojazd 6">
-                <h3 id="name">Sportiva ZR2</h3>
+                <h3 class="name">Sportiva ZR2</h3>
                 <button onclick="addToCart(6)">Dodaj do koszyka</button>
-                <button id="btn_more" data-target="6">Szczegóły</button>
-                <div id="details"></div>
+                <button class="btn_more" data-target="6">Szczegóły</button>
+                <div class="details"></div>
             </div>                     
         </div>
         <div id="more_content"><button>Załaduj wszystkie szczegóły</button></div>
