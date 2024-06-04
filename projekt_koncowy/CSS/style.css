@@ -30,12 +30,12 @@ nav ul{
 }
 
 nav li{
+    margin-right: 4px;
     height: 50px;
 }
 
 nav a{
     padding: 10px 20px;
-    border-radius: 7px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -48,6 +48,16 @@ nav i{
 
 nav a:hover{
     background-color: #424752;
+    border-bottom: none;
+    color: white;
+    border-radius: 7px;
+}
+
+.btn_active{
+    background-color: #3aac49;
+    border-bottom: none;
+    color: white;
+    border-radius: 7px;
 }
 
 nav li:first-child{
